@@ -1,0 +1,119 @@
+import numpy as np
+import pandas as pd
+
+df = pd.read_csv('\\Users\\jarod\\Desktop\\oil and gas stock prices.csv')
+
+df
+
+for column in df.columns:
+    if  object != df[column].dtypes:
+        q1 = df[column].quantile(0.25)
+        q2 = df[column].quantile(0.50)
+        q3 = df[column].quantile(0.75)
+        IQR = q3 - q1
+        print('Column Name:',column)
+        print('Q1',q1)
+        print('Q2',q2)
+        print('Q3',q3)
+        print('IQR',IQR)
+        print('STD:',df[column].std())
+        print('MEAN:',df[column].mean())
+        print('MEDIAN:',df[column].median())
+        print('MODE:',df[column].mode()[0])
+        print('MAX:',df[column].max())
+        print('MIN:',df[column].min())
+        print('\n')
+        
+Column Name: Open
+Q1 30.23
+Q2 52.32
+Q3 77.17
+IQR 46.94
+STD: 30.2459845768643
+MEAN: 54.364067498278104
+MEDIAN: 52.32
+MODE: 40.0
+MAX: 180.95
+MIN: 3.22
+
+
+Column Name: High
+Q1 30.73
+Q2 53.05
+Q3 78.03
+IQR 47.3
+STD: 30.4960495862545
+MEAN: 55.00100890283411
+MEDIAN: 53.05
+MODE: 8.4
+MAX: 182.4
+MIN: 3.29
+
+
+Column Name: Low
+Q1 29.75
+Q2 51.62
+Q3 76.31
+IQR 46.56
+STD: 29.99902351876918
+MEAN: 53.70522027499298
+MEDIAN: 51.62
+MODE: 8.2
+MAX: 180.25
+MIN: 3.02
+
+
+Column Name: Close
+Q1 30.2
+Q2 52.32
+Q3 77.17
+IQR 46.97
+STD: 30.25734084012442
+MEAN: 54.36259585214663
+MEDIAN: 52.32
+MODE: 8.57
+MAX: 181.13
+MIN: 3.12
+
+
+Column Name: Volume
+Q1 4866770.0
+Q2 7446208.0
+Q3 11370000.0
+IQR 6503230.0
+STD: 7496890.046660818
+MEAN: 9352226.464707533
+MEDIAN: 7446208.0
+MODE: 2839800
+MAX: 273996608
+MIN: 95700
+
+pip install "notebook>=5.3" "ipywidgets>=7.2"
+
+import plotly.express as px
+
+for y in ["Open", "High", "Low", "Close", "Volume"]: 
+    Histogram = px.histogram(df, x = "Date", y = y, color = "Symbol",
+                       color_discrete_sequence = px.colors.qualitative.Set1,
+                       title = f"Absolute Trading {y} Distribution of Major US Oil Companies")
+    
+    Histogram.update_layout(template = "seaborn", font = dict(family = "Times New Roman", size = 13))
+    Histogram.show()
+    
+data = pd.read_csv("\\Users\\jarod\\Desktop\\oil and gas stock prices.csv")
+
+def every_stock_tick_name():
+    stock_tick_names = data['Symbol'].unique()
+    print(stock_tick_names)
+    
+def stock_tick_names():
+    stock_name = input("Enter a Stock Ticker Name: ")
+    all_data = data['Symbol'] == stock_name
+    final_data = data[all_data]
+    return final_data.head()
+    
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: XOM

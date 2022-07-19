@@ -117,3 +117,45 @@ stock_tick_names()
 
 ['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
 Enter a Stock Ticker Name: XOM
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: CVX
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: COP
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: MPC
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: PSX
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: VLO
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: MRO
+
+every_stock_tick_name()
+stock_tick_names()
+
+['XOM' 'CVX' 'COP' 'MPC' 'PSX' 'VLO' 'MRO' 'SLB']
+Enter a Stock Ticker Name: SLB

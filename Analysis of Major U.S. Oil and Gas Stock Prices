@@ -3,6 +3,8 @@ import pandas as pd
 
 df = pd.read_csv('\\Users\\jarod\\Desktop\\oil and gas stock prices.csv')
 
+#creating a dataframe from the data contained in the .csv file.
+
 df
 
 for column in df.columns:
@@ -23,7 +25,9 @@ for column in df.columns:
         print('MAX:',df[column].max())
         print('MIN:',df[column].min())
         print('\n')
-        
+
+#Finding the quantiles, IQR, STD, mean, median, mode, max value, and min value for the rows: Open, High, Low, Close, and Volume.
+
 Column Name: Open
 Q1 30.23
 Q2 52.32
@@ -90,6 +94,8 @@ MIN: 95700
 
 pip install "notebook>=5.3" "ipywidgets>=7.2"
 
+#Using an ipywidget so that the histograms about to created will be visible within Jupyter Notebook.
+
 import plotly.express as px
 
 for y in ["Open", "High", "Low", "Close", "Volume"]: 
@@ -99,6 +105,8 @@ for y in ["Open", "High", "Low", "Close", "Volume"]:
     
     Histogram.update_layout(template = "seaborn", font = dict(family = "Times New Roman", size = 13))
     Histogram.show()
+    
+#Histograms were created from the data contained in the .csv file for the "Open", "High", "Low", "Close", and "Volume".
     
 data = pd.read_csv("\\Users\\jarod\\Desktop\\oil and gas stock prices.csv")
 
@@ -111,6 +119,9 @@ def stock_tick_names():
     all_data = data['Symbol'] == stock_name
     final_data = data[all_data]
     return final_data.head()
+    
+#Function was created that displays the data for any specified stock symbol within the .csv data. 
+#So, I called the data for each stock ticker and a separate dataframe was created for each.
     
 every_stock_tick_name()
 stock_tick_names()
